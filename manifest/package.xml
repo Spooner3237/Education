@@ -24,10 +24,5 @@
         <members>*</members>
         <name>LightningComponentBundle</name>
     </types>
-    <types>
-        <members>Account</members>
-        <members>*</members>
-        <name>CustomObject</name>
-    </types>
     <version>54.0</version>
 </Package>
