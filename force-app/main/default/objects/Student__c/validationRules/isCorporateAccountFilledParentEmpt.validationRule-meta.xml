@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isCorporateAccountFilledParentEmpt</fullName>
+    <active>true</active>
+    <errorConditionFormula>/* 4.	Student isActive fieldi işaretli ise status, email ve phone fieldleri dolu olmalıdır.*/
+
+
+ IF(isActive__c ,    
+    OR( ISBLANK(  TEXT(Status__c)), 
+        ISBLANK (Email__c),
+        ISBLANK (Phone__c)
+      ),ISBLANK(  TEXT(Status__c))
+   )</errorConditionFormula>
+    <errorDisplayField>isActive__c</errorDisplayField>
+    <errorMessage>Student isActive fieldi işaretli ise status, email ve phone fieldleri dolu olmalıdır.</errorMessage>
+</ValidationRule>

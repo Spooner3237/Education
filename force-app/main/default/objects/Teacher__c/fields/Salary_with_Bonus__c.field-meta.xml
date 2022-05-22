@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salary_with_Bonus__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(Gender__c, &quot;Mr&quot;) ,   Salary__c * 1.1 ,
+   IF(  AND(ISPICKVAL(Gender__c, &quot;Mrs&quot;) , YEAR(TODAY()) - YEAR( Date_Of_Birth__c ) &gt; 30)  , Salary__c * 1.3, 
+       Salary__c * 1.2
+     ) 
+  ) + 
+           
+IF ( BEGINS(First_Name__c, &quot;A&quot;), Salary__c * 0.1 , 0 
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Salary with Bonus</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

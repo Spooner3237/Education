@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmployeeCanNotBeNegative</fullName>
+    <active>false</active>
+    <errorConditionFormula>NumberOfEmployees &lt; 0</errorConditionFormula>
+    <errorDisplayField>NumberOfEmployees</errorDisplayField>
+    <errorMessage>Employee fieldi negatif değer alamaz. Lütfen pozitif değer girin.</errorMessage>
+</ValidationRule>
